@@ -1,0 +1,26 @@
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.title, .recipe-name, .section-name {
+    text-align: center;
+}
+
+#odin-eats, .dish-image {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.list-recipes {
+    list-style-type: none;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.recipe {
+    font-size: 1.5em;
+    padding: 20px;
+}
