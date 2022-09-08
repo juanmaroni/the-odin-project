@@ -51,20 +51,24 @@ nav {
 #nav-menu ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+
+#nav-menu li {
+    width: 200px;
 }
 
 .menu-a {
     color: inherit;
+    display: block;
     text-align: center;
-    width: 150px;
     padding: 10px;
 }
 
 .menu-a:hover {
     color: #1f2937;
     background-color: #e5e7eb;
+    border-radius: 5px;
 }
 
 .hero-h1 {
