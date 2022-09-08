@@ -175,3 +175,12 @@ nav {
 .banner-button {
     border: 1px solid #f9faf8;
 }
+
+footer {
+    color: #e5e7eb;
+    background-color: #1f2937;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
