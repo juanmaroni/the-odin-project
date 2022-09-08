@@ -8,7 +8,7 @@ Basic HTML with a bit of CSS for fun.
 ### [Live](https://juanmaroni.me/the-odin-project/odin-recipes/)
 
 ## landing-page
-### [Project: Recipes](https://www.theodinproject.com/lessons/foundations-landing-page)
+### [Project: Landing Page](https://www.theodinproject.com/lessons/foundations-landing-page)
 I used information and images from the [About page](https://www.theodinproject.com/about).
 
 I mostly followed the style instructions, but added subtle changes (I like Lato).
