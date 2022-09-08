@@ -11,8 +11,10 @@ a {
 
 button {
     color: #e5e7eb;
+    font-weight: bold;
     background-color: #3882f6;
     width: 80px;
+    height: 30px;
     padding: 5px;
     border: none;
     border-radius: 5px;
@@ -142,4 +144,34 @@ nav {
     font-size: 20px;
     font-weight: bold;
     text-align: right;
+}
+
+#banner-signup {
+    background-color: #3882f6;
+    color: #e5e7eb;
+    width: 960px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-text {
+    margin: 0;
+}
+
+.banner-bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner-subtext {
+    font-size: 14px;
+}
+
+.banner-button {
+    border: 1px solid #f9faf8;
 }
