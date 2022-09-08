@@ -15,4 +15,4 @@ I mostly followed the style instructions, but added subtle changes (I like Lato)
 
 ![Screenshot](https://raw.githubusercontent.com/juanmaroni/the-odin-project/f253a870116c9e60385a5120f24c8c0e5d30978a/landing-page/screenshot.png)
 
-### [Live](https://juanmaroni.me/the-odin-project/odin-recipes/)
+### [Live](https://juanmaroni.me/the-odin-project/landing-page/)
