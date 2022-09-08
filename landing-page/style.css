@@ -92,3 +92,28 @@ nav {
     padding: 10px;
     margin-left: 25px;
 }
+
+#main-info {
+    height: 400px;
+}
+
+#info-h1 {
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#info-features {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+}
