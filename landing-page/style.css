@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #1f2937;
+}
+
+nav {
+    height: 100px;
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-logo {
+    height: 100px;
+    background-color: #1f2937;
+}
+
+#nav-menu, .hero-h2 {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+#nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-a {
+    color: inherit;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+}
+
+.menu-a:hover {
+    color: #1f2937;
+    background-color: #e5e7eb;
+}
