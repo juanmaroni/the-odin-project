@@ -5,7 +5,7 @@ Practice projects.
 ### [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes)
 Basic HTML with a bit of CSS for fun.
 
-### [Live](https://juanmaroni.me/odin-recipes/)
+### [Live](https://juanmaroni.me/the-odin-project/odin-recipes/)
 
 ## landing-page
 ### [Project: Recipes](https://www.theodinproject.com/lessons/foundations-landing-page)
