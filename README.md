@@ -18,3 +18,7 @@ Not bothering with mobile version for now.
 ![Screenshot](https://raw.githubusercontent.com/juanmaroni/the-odin-project/f253a870116c9e60385a5120f24c8c0e5d30978a/landing-page/screenshot.png)
 
 ### [Live](https://juanmaroni.me/the-odin-project/landing-page/)
+
+## rock-paper-scissors
+### [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+Rounds are defined by the player. Draws count as completed rounds.
