@@ -1,7 +1,6 @@
 // Randomize computer choice
-getComputerChoice = () => {
+let getComputerChoice = () => {
     let n = Math.floor(Math.random() * 3);
-    console.log('Got number ' + n);
 
     if (n == 0) {
         return 'Rock';
@@ -12,11 +11,12 @@ getComputerChoice = () => {
     }
 }
 
+// Play one round
 // Let's use codes:
 //   0 => player wins
 //   1 => computer wins
 //   -1 => draw
-playRound = (playerSelection, computerSelection) => {
+let playRound = (playerSelection, computerSelection) => {
     // Convert to lower case
     let playerSel = playerSelection.toLowerCase();
     let computerSel = computerSelection.toLowerCase();
@@ -55,18 +55,19 @@ playRound = (playerSelection, computerSelection) => {
             return -1;
         }
     } else {
-        console.log('Error, you probably mistyped!');
-        throw new Error('Incorrect input!');
+        alert('Incorrect input! Refresh and enter \'rock\', \'paper\' or \'scissors\'');
+        throw new Error('Incorrect input! Enter \'rock\', \'paper\' or \'scissors\'');
     }
 }
 
-// Play a game for a number of rounds defined by the player
-game = (n_rounds) => {
+// Play a game for a number of rounds defined by the player or default to 5
+let game = (promptRounds) => {
     // Convert to Number
-    const rounds = Number(n_rounds);
+    let rounds = promptRounds ? Number(promptRounds) : 5;
 
     // Check input
     if (isNaN(rounds) || rounds < 0) {
+        alert('Incorrect input! Refresh and enter a positive number');
         throw new Error('Incorrect input! Enter a positive number');
     } else if (rounds === 0) {
         console.log('GG, coward!');
@@ -75,13 +76,15 @@ game = (n_rounds) => {
         let computerScore = 0;
     
         for (i = 0; i < rounds; i++) {
-            let roundScore = playRound(prompt('Enter your play'), getComputerChoice());
+            let roundResult = playRound(prompt('Enter your play'), getComputerChoice());
     
-            if (roundScore === 0) {
+            if (roundResult === 0) {
                 playerScore += 1;
-            } else if (roundScore === 1) {
+            } else if (roundResult === 1) {
                 computerScore += 1;
-            }        
+            }
+            // If you don't want to count draws, reset the round:
+            //   else { rounds -= 1 }
         }
     
         console.log('Final score (you - computer): ' + playerScore + ' - ' + computerScore);
