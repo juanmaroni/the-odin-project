@@ -22,3 +22,5 @@ Not bothering with mobile version for now.
 ## rock-paper-scissors
 ### [Project: Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
 Rounds are defined by the player. Draws count as completed rounds.
+
+### [Live (developer console version)](https://juanmaroni.me/the-odin-project/rock-paper-scissors/console/)
