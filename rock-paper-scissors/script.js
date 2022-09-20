@@ -1,3 +1,11 @@
+// Event to get player choice
+const choices = document.querySelectorAll('.choice');
+choices.forEach((choice) => {
+    choice.addEventListener('click', () => {
+        alert(choice.name);
+    });
+});
+
 // Randomize computer choice
 let getComputerChoice = () => {
     let n = Math.floor(Math.random() * 3);
