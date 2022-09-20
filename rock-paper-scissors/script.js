@@ -11,11 +11,11 @@ let getComputerChoice = () => {
     let n = Math.floor(Math.random() * 3);
 
     if (n == 0) {
-        return 'Rock';
+        return 'rock';
     } else if (n == 1) {
-        return 'Paper';
+        return 'paper';
     } else {
-        return 'Scissors';
+        return 'scissors';
     }
 }
 
@@ -27,7 +27,7 @@ let getComputerChoice = () => {
 let playRound = (playerSelection, computerSelection) => {
     // Convert to lower case
     let playerSel = playerSelection.toLowerCase();
-    let computerSel = computerSelection.toLowerCase();
+    let computerSel = computerSelection.toLowerCase(); // Just in case
 
     if (playerSel === 'rock') {
         if (computerSel === 'scissors') {
