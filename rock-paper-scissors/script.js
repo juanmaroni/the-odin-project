@@ -9,7 +9,7 @@ choices.forEach((choice) => {
         let cleanResults = false;
 
         // Init the round
-        let result = playRound(choice.name, getComputerChoice());
+        let result = playRound(Number(choice.name), getComputerChoice());
         
         // Select the section to display results
         const results = document.querySelector('#results');
@@ -67,55 +67,46 @@ function resetScores() {
 
 // Randomize computer choice
 function getComputerChoice() {
-    let n = Math.floor(Math.random() * 3);
-
-    if (n === 0) {
-        return 'rock';
-    } else if (n === 1) {
-        return 'paper';
-    } else {
-        return 'scissors';
-    }
+    return Math.floor(Math.random() * 3);
 }
 
 // Play one round
 // Let's use codes:
-//   0 => üser wins
+//   0 => user wins
 //   1 => computer wins
 //   -1 => draw
 function playRound(userSelection, computerSelection) {
-    // Convert to lower case
-    let userSel = userSelection.toLowerCase();
-    let computerSel = computerSelection.toLowerCase(); // Just in case
-    console.log('Computer chose ' + computerSel);
-
-    if (userSel === 'rock') {
-        if (computerSel === 'scissors') {
+    // Compare using numbers:
+    //   0 => Rock
+    //   1 => Paper
+    //   2 => Scissors 
+    if (userSelection === 0) {
+        if (computerSelection === 2) {
             console.log('You Win! Rock beats Scissors');
             return 0;
-        } else if (computerSel === 'paper') {
+        } else if (computerSelection === 1) {
             console.log('You Lose! Paper beats Rock');
             return 1;
         } else {
             console.log('That\'s a draw!');
             return -1;
         }
-    } else if (userSel === 'paper') {
-        if (computerSel === 'rock') {
+    } else if (userSelection === 1) {
+        if (computerSelection === 0) {
             console.log('You Win! Paper beats Rock');
             return 0;
-        } else if (computerSel === 'scissors') {
+        } else if (computerSelection === 2) {
             console.log('You Lose! Scissors beats Paper');
             return 1;
         } else {
             console.log('That\'s a draw!');
             return -1;
         }
-    } else if (userSel === 'scissors') {
-        if (computerSel === 'paper') {
+    } else if (userSelection === 2) {
+        if (computerSelection === 1) {
             console.log('You Win! Scissors beats Paper');
             return 0;
-        } else if (computerSel === 'rock') {
+        } else if (computerSelection === 0) {
             console.log('You Lose! Rock beats Scissors');
             return 1;
         } else {
