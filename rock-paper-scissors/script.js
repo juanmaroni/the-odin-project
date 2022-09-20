@@ -2,14 +2,31 @@
 const choices = document.querySelectorAll('.choice');
 choices.forEach((choice) => {
     choice.addEventListener('click', () => {
-        alert(choice.name);
+        // Init the round
+        let result = playRound(choice.name, getComputerChoice());
+        
+        // Select the section to display results
+        const results = document.querySelector('#results');
+
+        // Create a paragraph to show the result
+        const p = document.createElement('p');
+
+        if (result === 0) {
+            p.textContent = 'You win!';
+        } else if (result === 1) {
+            p.textContent = 'You lose!';
+        } else {
+            p.textContent = 'It\'s a draw!';
+        }
+
+        results.appendChild(p);
     });
 });
 
 // Randomize computer choice
 let getComputerChoice = () => {
     let n = Math.floor(Math.random() * 3);
-
+    // TODO: Change to '==='
     if (n == 0) {
         return 'rock';
     } else if (n == 1) {
