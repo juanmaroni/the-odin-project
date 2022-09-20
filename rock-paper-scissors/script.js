@@ -100,4 +100,4 @@ let game = (promptRounds) => {
 }
 
 // Let's play!
-console.log(game(prompt('How many rounds do you wanna play?')));
+//console.log(game(prompt('How many rounds do you wanna play?')));
