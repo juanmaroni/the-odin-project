@@ -1,7 +1,13 @@
-// Event to get player choice
+// Event to get user choice
 const choices = document.querySelectorAll('.choice');
 choices.forEach((choice) => {
     choice.addEventListener('click', () => {
+        // Set max score to end the game
+        const maxScore = 5;
+
+        // Clean when the game ends
+        let cleanResults = false;
+
         // Init the round
         let result = playRound(choice.name, getComputerChoice());
         
@@ -10,18 +16,52 @@ choices.forEach((choice) => {
 
         // Create a paragraph to show the result
         const p = document.createElement('p');
+        p.classList.add('result');
 
         if (result === 0) {
             p.textContent = 'You win!';
+            cleanResults = checkGameOver('#user-score', maxScore, 'Congratulations! You won!');
+            
         } else if (result === 1) {
             p.textContent = 'You lose!';
+            cleanResults = checkGameOver('#computer-score', maxScore, 'Oh, no! You lost!');
+            
         } else {
             p.textContent = 'It\'s a draw!';
         }
 
-        results.appendChild(p);
+        if (cleanResults) {
+            document.querySelector('#results').replaceChildren();
+        } else {
+            results.appendChild(p);
+        }
     });
 });
+
+function checkGameOver(selector, maxScore, message) {
+    if (increaseScore(selector, maxScore)) {
+        alert(message);
+
+        // Reset game
+        return resetScores();
+    }
+}
+
+// Increase score and return true if the max score have been reached
+function increaseScore(selector, maxScore) {
+    let score = document.querySelector(selector);
+    score.textContent++;
+
+    return Number(score.textContent) === maxScore;
+}
+
+// Reset scores to 0 and return a boolean to clean results
+function resetScores() {
+    document.querySelector('#user-score').textContent = '0';
+    document.querySelector('#computer-score').textContent = '0';
+    
+    return true;
+}
 
 // Randomize computer choice
 let getComputerChoice = () => {
@@ -45,6 +85,7 @@ let playRound = (playerSelection, computerSelection) => {
     // Convert to lower case
     let playerSel = playerSelection.toLowerCase();
     let computerSel = computerSelection.toLowerCase(); // Just in case
+    console.log('Computer chose ' + computerSel);
 
     if (playerSel === 'rock') {
         if (computerSel === 'scissors') {
