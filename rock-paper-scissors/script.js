@@ -16,16 +16,18 @@ choices.forEach((choice) => {
 
         // Create a paragraph to show the result
         const p = document.createElement('p');
-        p.classList.add('result');
 
         if (result === 0) {
             p.textContent = 'You win this round!';
+            p.classList.toggle('result-user-wins');
             cleanResults = checkGameOver('#user-score', maxScore, 'Congratulations! You won!');
         } else if (result === 1) {
             p.textContent = 'You lose this round!';
+            p.classList.toggle('result-user-loses');
             cleanResults = checkGameOver('#computer-score', maxScore, 'Oh, no! You lost!');
         } else {
             p.textContent = 'This round resulted in a draw!';
+            p.classList.toggle('result-draw');
         }
 
         if (cleanResults) {
@@ -78,16 +80,16 @@ function getComputerChoice() {
 
 // Play one round
 // Let's use codes:
-//   0 => player wins
+//   0 => üser wins
 //   1 => computer wins
 //   -1 => draw
-function playRound(playerSelection, computerSelection) {
+function playRound(userSelection, computerSelection) {
     // Convert to lower case
-    let playerSel = playerSelection.toLowerCase();
+    let userSel = userSelection.toLowerCase();
     let computerSel = computerSelection.toLowerCase(); // Just in case
     console.log('Computer chose ' + computerSel);
 
-    if (playerSel === 'rock') {
+    if (userSel === 'rock') {
         if (computerSel === 'scissors') {
             console.log('You Win! Rock beats Scissors');
             return 0;
@@ -98,7 +100,7 @@ function playRound(playerSelection, computerSelection) {
             console.log('That\'s a draw!');
             return -1;
         }
-    } else if (playerSel === 'paper') {
+    } else if (userSel === 'paper') {
         if (computerSel === 'rock') {
             console.log('You Win! Paper beats Rock');
             return 0;
@@ -109,7 +111,7 @@ function playRound(playerSelection, computerSelection) {
             console.log('That\'s a draw!');
             return -1;
         }
-    } else if (playerSel === 'scissors') {
+    } else if (userSel === 'scissors') {
         if (computerSel === 'paper') {
             console.log('You Win! Scissors beats Paper');
             return 0;

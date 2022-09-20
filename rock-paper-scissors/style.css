@@ -1,10 +1,39 @@
 body {
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+main {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#choices {
+    display: flex;
+    justify-content: space-between;
 }
 
 .choice {
     font-size: 3em;
+    width: 75px;
+}
+
+.result-user-wins {
+    color: green;
+    font-weight: bold;
+    text-align: left;
+}
+
+.result-user-loses {
+    color: red;
+    font-weight: bold;
+    text-align: right;
+}
+
+.result-draw {
+    font-weight: bold;
 }
 
 #score {
