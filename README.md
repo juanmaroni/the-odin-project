@@ -24,3 +24,11 @@ Not bothering with mobile version for now.
 Rounds are defined by the player. Draws count as completed rounds.
 
 ### [Live (developer console version)](https://juanmaroni.me/the-odin-project/rock-paper-scissors/console/)
+
+-----
+
+### [Revisiting Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
+New branch ("rps-ui"). I didn't want to delete it.
+Rounds fixed to 5.
+
+### [Live (UI version)](https://juanmaroni.me/the-odin-project/rock-paper-scissors/ui/)
