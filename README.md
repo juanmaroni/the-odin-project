@@ -15,7 +15,7 @@ I mostly followed the style instructions, but added subtle changes (I like Lato)
 
 Not bothering with mobile version for now.
 
-![Screenshot](https://raw.githubusercontent.com/juanmaroni/the-odin-project/f253a870116c9e60385a5120f24c8c0e5d30978a/landing-page/screenshot.png)
+![Screenshot landing-page](https://raw.githubusercontent.com/juanmaroni/the-odin-project/f253a870116c9e60385a5120f24c8c0e5d30978a/landing-page/screenshot.png)
 
 ### [Live](https://juanmaroni.me/the-odin-project/landing-page/)
 
@@ -28,7 +28,10 @@ Rounds are defined by the player. Draws count as completed rounds.
 -----
 
 ### [Revisiting Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
-New branch ("rps-ui"). I didn't want to delete it.
+New branch ("rps-ui"). I didn't want to delete it. I didn't want to overdo this project, I am satisfied with the result.
+
 Rounds fixed to 5.
+
+![Screenshot rock-paper-sicssors](https://raw.githubusercontent.com/juanmaroni/the-odin-project/main/rock-paper-scissors/screenshot.png)
 
 ### [Live (UI version)](https://juanmaroni.me/the-odin-project/rock-paper-scissors/ui/)
