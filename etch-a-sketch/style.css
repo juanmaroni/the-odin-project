@@ -1,10 +1,23 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 #grid {
     display: grid;
-    grid-template-columns: repeat(16, 100px);
-    grid-template-rows: repeat(16, 100px);
-    grid-gap: 1px;
+    grid-template-columns: repeat(16, 50px);
+    grid-template-rows: repeat(16, 50px);
 }
 
 .square {
-    background-color: green;
+    background-color: black;
+}
+
+.square:hover {
+    background-color: white;
+}
+
+.square-painted {
+    background-color: white;
 }
