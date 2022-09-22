@@ -29,8 +29,8 @@ h2 {
     width: 640px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(16, 40px);
-    grid-template-rows: repeat(16, 40px);
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(16, 20px);
 }
 
 .square {
