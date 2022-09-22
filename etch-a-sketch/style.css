@@ -2,12 +2,29 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#set-grid-size {
+    padding: 10px 0;
+}
+
+#btn-set-size {
+    font-size: 1.5em;;
+    width: 150px;
+    height: 75px;
 }
 
 #grid {
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(16, 50px);
-    grid-template-rows: repeat(16, 50px);
+    grid-template-columns: repeat(16, 40px);
+    grid-template-rows: repeat(16, 40px);
 }
 
 .square {
