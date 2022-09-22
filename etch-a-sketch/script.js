@@ -8,10 +8,8 @@ generateGrid(16);
 const btnSetGrid = document.querySelector('#btn-set-size');
 btnSetGrid.addEventListener('click', () => {
     document.querySelector('#grid').replaceChildren();
-    let size = Number(prompt('Set size: min 1, max 30, default 16'));
-    size = size < 1 || size > 30 ? 16 : size;
-    
-    generateGrid(size);
+    let size = Number(prompt('Choose from 1 to 100, default is 16'));
+    generateGrid(size < 1 || size > 100 ? 16 : size);
 });
 
 // Generate a grid with a given size
@@ -24,14 +22,12 @@ function generateGrid(size) {
         }
     }
 
-    // Change grid width based on size
-    grid.style.width = size * 20 + 'px';
     // Distribute the squares
-    let gridTemplateRepeat = 'repeat(' + size + ', 20px)';
+    let gridTemplateRepeat = `repeat(${size}, 20px)`;
     grid.style.gridTemplateColumns = gridTemplateRepeat;
     grid.style.gridTemplateRows = gridTemplateRepeat;
 
-    // Add event to paint when a square is clicked
+    // Add event listener for painting when a square is clicked
     const lstSquares = document.querySelectorAll('.square');
     lstSquares.forEach((square) => {
         square.addEventListener('click', () => {
