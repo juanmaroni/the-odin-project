@@ -37,6 +37,6 @@ h2 {
     background-color: black;
 }
 
-.square:hover, .square-painted {
+.square:hover {
     background-color: white;
 }
