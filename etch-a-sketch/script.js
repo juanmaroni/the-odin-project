@@ -12,7 +12,7 @@ function generateGrid(size) {
     }
 
     // Change grid width based on size
-    grid.style.width = '' + size * 40;
+    grid.style.width = size * 40 + 'px';
     // Distribute the squares
     let gridTemplateRepeat = 'repeat(' + size + ', 40px)';
     grid.style.gridTemplateColumns = gridTemplateRepeat;

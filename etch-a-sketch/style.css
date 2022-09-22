@@ -10,6 +10,11 @@ main {
     margin: 0 auto;
 }
 
+h2 {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 #set-grid-size {
     padding: 10px 0;
 }
@@ -21,6 +26,7 @@ main {
 }
 
 #grid {
+    width: 640px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(16, 40px);
@@ -31,10 +37,6 @@ main {
     background-color: black;
 }
 
-.square:hover {
-    background-color: white;
-}
-
-.square-painted {
+.square:hover, .square-painted {
     background-color: white;
 }
