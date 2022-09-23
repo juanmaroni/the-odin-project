@@ -9,7 +9,7 @@ const btnSetGrid = document.querySelector('#btn-set-size');
 btnSetGrid.addEventListener('click', () => {
     document.querySelector('#grid').replaceChildren();
     let size = Number(prompt('Choose from 1 to 100, default is 16'));
-    // If out of limits, default to 16
+    // If input is out of limits, default to 16
     generateGrid(size < 1 || size > 100 ? 16 : size);
 });
 
@@ -36,6 +36,7 @@ function generateGrid(size) {
     })
 }
 
+// Return a color property with RGB values, like 'rgb(255,255,255)'
 function generateRgbColor() {
     return `rgb(${getRandomColor()},${getRandomColor()},${getRandomColor()})`;
 }
