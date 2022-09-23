@@ -35,3 +35,13 @@ Rounds fixed to 5.
 ![Screenshot rock-paper-sicssors](https://raw.githubusercontent.com/juanmaroni/the-odin-project/main/rock-paper-scissors/screenshot.png)
 
 ### [Live (UI version)](https://juanmaroni.me/the-odin-project/rock-paper-scissors/ui/)
+
+## etch-a-sketch
+### [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+I wanted to give CSS Grid a try.
+
+Painting click to click.
+
+![Screenshot etch-a-sketch](https://raw.githubusercontent.com/juanmaroni/the-odin-project/main/etch-a-sketch/screenshot.png)
+
+### [Live](https://juanmaroni.me/the-odin-project/etch-a-sketch/)
