@@ -31,11 +31,11 @@ h1 {
     grid-template-columns: repeat(16, 20px);
     grid-template-rows: repeat(16, 20px);
     justify-content: center;
-    cursor: crosshair;
 }
 
 .square {
     background-color: black;
+    cursor: crosshair;
 }
 
 .square:hover {
