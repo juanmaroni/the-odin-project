@@ -4,13 +4,19 @@ const grid = document.querySelector('#grid');
 // Default grid on page load
 generateGrid(16);
 
-// Set grid size
+// Set grid size with button
 const btnSetGrid = document.querySelector('#btn-set-size');
 btnSetGrid.addEventListener('click', () => {
-    document.querySelector('#grid').replaceChildren();
-    let size = Number(prompt('Choose from 1 to 100, default is 16'));
-    // If input is out of limits, default to 16
-    generateGrid(size < 1 || size > 100 ? 16 : size);
+    let size = prompt('Choose from 1 to 100, default is 16');
+
+    // Check input
+    if (size) {
+        // Delete old grid
+        document.querySelector('#grid').replaceChildren();
+        size = Number(size);
+        // If input is not a number or is out of limits, default to 16
+        generateGrid(isNaN(size) || size < 1 || size > 100 ? 16 : size);
+    }
 });
 
 // Generate a grid with a given size
