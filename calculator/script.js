@@ -1,3 +1,6 @@
+// Constraints
+const MAX_INT = 65536;
+
 const output = document.querySelector('#output');
 
 // Clear button
@@ -21,11 +24,6 @@ screenKeys.forEach((key) => {
             output.textContent = key.textContent;
         } else {
             output.textContent += key.textContent;
-        }
-
-        // Change font size to fit the screen
-        if (output.textContent.length > 7) {
-            setOutputFontSize(1.5);
         }
     });
 });
