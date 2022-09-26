@@ -6,6 +6,12 @@ btnClear.addEventListener('click', () => {
     clear();
 });
 
+// Undo (last input) button
+const btnUndo = document.querySelector('#undo');
+btnUndo.addEventListener('click', () => {
+    output.textContent = undo(output.textContent);
+});
+
 function add(a, b) {
     return a + b;
 }
@@ -24,4 +30,12 @@ function divide(a, b) {
 
 function clear() {
     output.textContent = '0';
+}
+
+function undo(text) {
+    if (text.length < 2) {
+        return '0';
+    }
+
+    return text.substring(0, text.length - 1);
 }
