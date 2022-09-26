@@ -15,9 +15,15 @@ body {
 }
 
 #screen {
+    text-align: right;
     width: 320px;
     height: 80px;
     border: 2px solid #000;
+}
+
+#output {
+    font-size: 3em;
+    padding: 10px;
 }
 
 #keyboard {
