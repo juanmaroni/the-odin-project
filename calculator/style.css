@@ -2,4 +2,46 @@ body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#calculator {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen {
+    width: 320px;
+    height: 80px;
+    border: 2px solid #000;
+}
+
+#keyboard {
+    width: 320px;
+}
+
+.keys-row {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    font-size: 2em;
+    height: 80px;
+    width: 80px;
+    padding: 0;
+}
+
+.bigkey {
+    font-size: 2em;
+    height: 80px;
+    width: 160px;
+}
+
+#keyboard, .keys-row > * {
+    border: 1px solid #000;
 }
