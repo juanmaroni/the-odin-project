@@ -2,6 +2,17 @@ const output = document.querySelector('#output');
 
 let operators = [];
 
+// Any key
+const allKeys = document.querySelectorAll('button');
+allKeys.forEach((key) => {
+    key.addEventListener('click', (e) => {
+        if (output.textContent === 'Error') {
+            clear();
+            e.stopImmediatePropagation();
+        }
+    });
+});
+
 // Clear button
 const btnClear = document.querySelector('#clear');
 btnClear.addEventListener('click', () => {
@@ -77,6 +88,7 @@ function divide(a, b) {
 
 function clear() {
     output.textContent = '0';
+    operators = [];
     setOutputFontSize(3);
 }
 
@@ -91,6 +103,7 @@ function undo(text) {
 function operate(screenText) {
     // Extract numbers from input
     let nums = screenText.split(/[^0-9\.]+/g);
+
     console.log('Operands: ' + nums);
     console.log('Operators: ' + operators);
 
@@ -104,7 +117,13 @@ function operate(screenText) {
     operators = [];
 
     console.log(result);
-    return result;
+
+    // Round to up to 2 decimal places
+    if (!isNaN(result)) {
+        return Math.round((result + Number.EPSILON) * 100) / 100;
+    } else {
+        return 'Error';
+    }
 }
 
 function selectOperation(operand1, operand2, operator) {
