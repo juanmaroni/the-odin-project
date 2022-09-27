@@ -1,5 +1,7 @@
 const output = document.querySelector('#output');
 
+let operators = [];
+
 // Clear button
 const btnClear = document.querySelector('#clear');
 btnClear.addEventListener('click', () => {
@@ -40,8 +42,21 @@ dotKey.addEventListener('click', () => {
 const opKeys = document.querySelectorAll('.op');
 opKeys.forEach((key) => {
     key.addEventListener('click', () => {
-        
+        let screenText = output.textContent;
+
+        if (!['+', '-', 'x', '/'].includes(screenText[screenText.length - 1])) {
+            operators.push(key.textContent);
+            output.textContent += key.textContent;
+        } else {
+            console.log('There is already an operator!');
+        }
     });
+});
+
+// Result
+const resultKey = document.querySelector('#result');
+resultKey.addEventListener('click', () => {
+    output.textContent = operate(output.textContent);
 });
 
 function add(a, b) {
@@ -74,7 +89,36 @@ function undo(text) {
 }
 
 function operate(screenText) {
-    
+    // Extract numbers from input
+    let nums = screenText.split(/[^0-9\.]+/g);
+    console.log('Operands: ' + nums);
+    console.log('Operators: ' + operators);
+
+    let result = 0;
+
+    for (i = 0; i < nums.length - 1; i++) {
+        result += selectOperation(Number(nums[i]), Number(nums[i + 1]), operators[i])
+    }
+
+    // Empty operators
+    operators = [];
+
+    console.log(result);
+    return result;
+}
+
+function selectOperation(operand1, operand2, operator) {
+    if (operator === '+') {
+        return add(operand1, operand2);
+    } else if (operator === '-') {
+        return substract(operand1, operand2);
+    } else if (operator === 'x') {
+        return multiply(operand1, operand2);
+    } else if (operator === '/') {
+        return divide(operand1, operand2);
+    } else {
+        throw Error('Something went wrong with the operator!');
+    }
 }
 
 function setOutputFontSize(size) {
