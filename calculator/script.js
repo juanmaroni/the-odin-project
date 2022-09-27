@@ -25,6 +25,17 @@ numKeys.forEach((key) => {
     });
 });
 
+// Print dot on screen output
+const dotKey = document.querySelector('#dot');
+dotKey.addEventListener('click', () => {
+    // If there is no dot yet
+    if (output.textContent.indexOf('.') < 0) {
+         output.textContent += '.';
+    } else {
+        console.log('There is already a dot for this number!');
+    }
+});
+
 // Print operators on screen output
 const opKeys = document.querySelectorAll('.op');
 opKeys.forEach((key) => {
