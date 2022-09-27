@@ -1,6 +1,3 @@
-// Constraints
-const MAX_INT = 65536;
-
 const output = document.querySelector('#output');
 
 // Clear button
@@ -15,9 +12,9 @@ btnUndo.addEventListener('click', () => {
     output.textContent = undo(output.textContent);
 });
 
-// Print keys on screen output
-const screenKeys = document.querySelectorAll('.screenkey');
-screenKeys.forEach((key) => {
+// Print numbers on screen output
+const numKeys = document.querySelectorAll('.num');
+numKeys.forEach((key) => {
     key.addEventListener('click', () => {
         // If the first number is 0, replace it
         if (output.textContent === '0') {
@@ -25,6 +22,14 @@ screenKeys.forEach((key) => {
         } else {
             output.textContent += key.textContent;
         }
+    });
+});
+
+// Print operators on screen output
+const opKeys = document.querySelectorAll('.op');
+opKeys.forEach((key) => {
+    key.addEventListener('click', () => {
+        
     });
 });
 
@@ -55,6 +60,10 @@ function undo(text) {
     }
 
     return text.substring(0, text.length - 1);
+}
+
+function operate(screenText) {
+    
 }
 
 function setOutputFontSize(size) {
