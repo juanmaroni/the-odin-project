@@ -17,8 +17,10 @@ body {
 #screen {
     text-align: right;
     width: 320px;
-    height: 80px;
+    min-height: 80px;
     border: 2px solid #000;
+    overflow-y: hidden;
+    word-break: break-all;    
 }
 
 #output {
