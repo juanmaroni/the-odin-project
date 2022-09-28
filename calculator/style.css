@@ -52,3 +52,22 @@ body {
     font-family: inherit;
     border: 1px solid #000;
 }
+
+#result {
+    color: #fff;
+    background-color: green;
+}
+
+#result:hover {
+    background-color: rgb(117, 243, 117);
+}
+
+#undo {
+    font-size: 1.5em;
+    color: #fff;
+    background-color: red;
+}
+
+#undo:hover {
+    background-color: rgb(243, 117, 117);
+}
