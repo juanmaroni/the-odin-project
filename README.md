@@ -1,6 +1,9 @@
 # [The Odin Project](https://www.theodinproject.com)
 Practice projects.
 
+## Overview
+I didn't bother too much making them for tiny screens. I wanted to build something that covered the project instructions and satisfied me, then keep moving on.
+
 ## odin-recipes
 ### [Project: Recipes](https://www.theodinproject.com/lessons/foundations-recipes)
 Basic HTML with a bit of CSS for fun.
@@ -12,8 +15,6 @@ Basic HTML with a bit of CSS for fun.
 I used information and images from the [About page](https://www.theodinproject.com/about).
 
 I mostly followed the style instructions, but added subtle changes (I like Lato).
-
-Not bothering with mobile version for now.
 
 ![Screenshot landing-page](https://raw.githubusercontent.com/juanmaroni/the-odin-project/f253a870116c9e60385a5120f24c8c0e5d30978a/landing-page/screenshot.png)
 
