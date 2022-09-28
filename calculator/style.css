@@ -1,5 +1,6 @@
 body {
     font-family: 'Orbitron', sans-serif;
+    background-color: #303030;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,13 +13,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 50px solid #000;
+    border-radius: 50px;
 }
 
 #screen {
+    background-color: #fff;
     text-align: right;
     width: 320px;
     min-height: 80px;
-    border: 2px solid #000;
+    border-bottom: 20px solid #000;
     overflow-y: hidden;
     word-break: break-all;    
 }
@@ -41,7 +45,6 @@ body {
     font-size: 2em;
     height: 80px;
     width: 80px;
-    padding: 0;
 }
 
 .bigkey {
@@ -50,7 +53,7 @@ body {
     width: 160px;
 }
 
-#keyboard, .keys-row > * {
+.keys-row > * {
     font-family: inherit;
     border: 1px solid #000;
 }
