@@ -93,11 +93,7 @@ function clear() {
 }
 
 function undo(text) {
-    if (text.length < 2) {
-        return '0';
-    }
-
-    return text.substring(0, text.length - 1);
+    return text.length < 2 ? '0' : text.substring(0, text.length - 1);
 }
 
 function operate(screenText) {
