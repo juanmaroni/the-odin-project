@@ -93,7 +93,6 @@ function clear() {
     output.textContent = '0';
     operators = [];
     allowDot = true;
-    setOutputFontSize(3);
 }
 
 function undo(text) {
@@ -149,8 +148,4 @@ function selectOperation(operand1, operand2, operator) {
     } else {
         throw Error('Something went wrong with the operator!');
     }
-}
-
-function setOutputFontSize(size) {
-    output.style.fontSize = size + 'em';
 }
