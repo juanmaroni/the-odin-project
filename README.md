@@ -53,6 +53,5 @@ Calculators look so simple in the front and so complex in the back...
 Considerations:
 - Operand, Operator, Operand, Operator... Doesn't allow negative input. It does allow negative results, but not calculations from those results.
 - Decimals aren't fully functional: only one dot per operation (before pressing '=').
-- I have to find a good way to control the screen when overflowing text.
 
 ### [Live](https://juanmaroni.me/the-odin-project/calculator/)
