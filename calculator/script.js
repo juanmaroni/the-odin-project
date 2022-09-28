@@ -107,16 +107,16 @@ function operate(screenText) {
     console.log('Operands: ' + nums);
     console.log('Operators: ' + operators);
 
-    let result = 0;
+    let result = Number(nums[0]);
 
-    for (i = 0; i < nums.length - 1; i++) {
-        result += selectOperation(Number(nums[i]), Number(nums[i + 1]), operators[i])
+    for (i = 1; i < nums.length; i++) {
+        result = selectOperation(result, Number(nums[i]), operators[i-1]);
     }
+
+    console.log(result);
 
     // Empty operators
     operators = [];
-
-    console.log(result);
 
     // Round to up to 2 decimal places
     if (!isNaN(result)) {
