@@ -1,6 +1,7 @@
 const output = document.querySelector('#output');
 
 let operators = [];
+let allowDot = true;
 
 // Any key
 const allKeys = document.querySelectorAll('button');
@@ -42,8 +43,9 @@ numKeys.forEach((key) => {
 const dotKey = document.querySelector('#dot');
 dotKey.addEventListener('click', () => {
     // If there is no dot yet
-    if (output.textContent.indexOf('.') < 0) {
+    if (allowDot) {
          output.textContent += '.';
+         allowDot = false;
     } else {
         console.log('There is already a dot for this number!');
     }
@@ -57,6 +59,7 @@ opKeys.forEach((key) => {
 
         if (!['+', '-', 'x', '/'].includes(screenText[screenText.length - 1])) {
             operators.push(key.textContent);
+            allowDot = true;
             output.textContent += key.textContent;
         } else {
             console.log('There is already an operator!');
@@ -89,16 +92,23 @@ function divide(a, b) {
 function clear() {
     output.textContent = '0';
     operators = [];
+    allowDot = true;
     setOutputFontSize(3);
 }
 
 function undo(text) {
-    return text.length < 2 ? '0' : text.substring(0, text.length - 1);
+    let textLastIndex = text.length - 1;
+    
+    if (text[textLastIndex] === '.') {
+        allowDot = true;
+    }
+
+    return textLastIndex < 1 ? '0' : text.substring(0, textLastIndex);
 }
 
 function operate(screenText) {
     // Extract numbers from input
-    let nums = screenText.split(/[^0-9\.]+/g).filter(Boolean);;
+    let nums = screenText.split(/[^0-9\.]+/g).filter(Boolean);
 
     // Error when pressing '=' after operator
     if (nums.length === operators.length) {
