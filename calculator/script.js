@@ -102,7 +102,12 @@ function undo(text) {
 
 function operate(screenText) {
     // Extract numbers from input
-    let nums = screenText.split(/[^0-9\.]+/g);
+    let nums = screenText.split(/[^0-9\.]+/g).filter(Boolean);;
+
+    // Error when pressing '=' after operator
+    if (nums.length === operators.length) {
+        return 'Error';
+    }
 
     console.log('Operands: ' + nums);
     console.log('Operators: ' + operators);
