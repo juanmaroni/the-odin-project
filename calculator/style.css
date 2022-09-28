@@ -53,6 +53,15 @@ body {
     border: 1px solid #000;
 }
 
+.op {
+    color: #fff;
+    background-color: blue;
+}
+
+.op:hover {
+    background-color: rgb(117, 117, 243);
+}
+
 #result {
     color: #fff;
     background-color: green;
