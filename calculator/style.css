@@ -62,6 +62,15 @@ body {
     background-color: rgb(117, 117, 243);
 }
 
+#clear {
+    color: #fff;
+    background-color: violet;
+}
+
+#clear:hover {
+    background-color: rgb(241, 190, 241);
+}
+
 #result {
     color: #fff;
     background-color: green;
