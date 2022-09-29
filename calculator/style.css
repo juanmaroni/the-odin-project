@@ -41,15 +41,17 @@ body {
     justify-content: center;
 }
 
-.key {
+.key, .bigkey {
     font-size: 2em;
     height: 80px;
+    outline: none;
+}
+
+.key {
     width: 80px;
 }
 
 .bigkey {
-    font-size: 2em;
-    height: 80px;
     width: 160px;
 }
 
