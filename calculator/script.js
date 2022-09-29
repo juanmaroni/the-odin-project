@@ -59,9 +59,6 @@ opKeys.forEach((key) => {
         let prevInput = screenText[screenText.length - 1];
         let newInput = key.textContent;
 
-        console.log('Prev input ' + prevInput);
-        console.log('New input ' + newInput);
-
         if ((['+', 'x', '/'].includes(prevInput) || !isNaN(prevInput)) && newInput === '-') {
             operators.push('+');
             output.textContent += '-';
@@ -80,22 +77,6 @@ const resultKey = document.querySelector('#result');
 resultKey.addEventListener('click', () => {
     output.textContent = operate(output.textContent);
 });
-
-function add(a, b) {
-    return a + b;
-}
-
-function substract(a, b) {
-    return a - b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function divide(a, b) {
-    return a / b;
-}
 
 function clear() {
     output.textContent = '0';
@@ -120,11 +101,6 @@ function isNumber(text) {
 function operate(screenText) {
     // Extract numbers from input
     let nums = screenText.split(/(-?\d+\.?\d*)/g).filter(isNumber);
-
-    // Error when pressing '=' after operator
-    if (nums.length === operators.length) {
-        //return 'Error';
-    }
 
     console.log('Operands: ' + nums);
     console.log('Operators: ' + operators);
@@ -154,13 +130,11 @@ function operate(screenText) {
 
 function selectOperation(operand1, operand2, operator) {
     if (operator === '+') {
-        return add(operand1, operand2);
-    } else if (operator === '-') {
-        return substract(operand1, operand2);
+        return operand1 + operand2;
     } else if (operator === 'x') {
-        return multiply(operand1, operand2);
+        return operand1 * operand2;
     } else if (operator === '/') {
-        return divide(operand1, operand2);
+        return operand1 / operand2;
     } else {
         throw Error('Something went wrong with the operator!');
     }
