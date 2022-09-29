@@ -52,7 +52,10 @@ Painting click to click.
 Calculators look so simple in the front and so complex in the back...
 
 Considerations:
-- Operand, Operator, Operand, Operator... Doesn't allow negative input. It does allow negative results, but not calculations from those results.
+- No multi-sign (something like "--+-1").
+- I probably started with a bad approach.
+- Dealing with subtraction as negative numbers, adding a '+' operator in the back, in place of '-'. This means that "3-1" goes as "3+(-1)".
+- If there is any bug... sorry. ¯\\\_(ツ)_/¯
 
 ![Screenshot calculator](https://raw.githubusercontent.com/juanmaroni/the-odin-project/main/calculator/screenshot.png)
 
