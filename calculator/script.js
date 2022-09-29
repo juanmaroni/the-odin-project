@@ -56,11 +56,19 @@ const opKeys = document.querySelectorAll('.op');
 opKeys.forEach((key) => {
     key.addEventListener('click', () => {
         let screenText = output.textContent;
+        let prevInput = screenText[screenText.length - 1];
+        let newInput = key.textContent;
 
-        if (!['+', '-', 'x', '/'].includes(screenText[screenText.length - 1])) {
-            operators.push(key.textContent);
+        console.log('Prev input ' + prevInput);
+        console.log('New input ' + newInput);
+
+        if ((['+', 'x', '/'].includes(prevInput) || !isNaN(prevInput)) && newInput === '-') {
+            operators.push('+');
+            output.textContent += '-';
+        } else if (!['+', '-', 'x', '/'].includes(prevInput)) {
+            operators.push(newInput);
             allowDot = true;
-            output.textContent += key.textContent;
+            output.textContent += newInput;
         } else {
             console.log('There is already an operator!');
         }
@@ -105,13 +113,17 @@ function undo(text) {
     return textLastIndex < 1 ? '0' : text.substring(0, textLastIndex);
 }
 
+function isNumber(text) {
+    return text && !isNaN(text);
+}
+
 function operate(screenText) {
     // Extract numbers from input
-    let nums = screenText.split(/[^0-9\.]+/g).filter(Boolean);
+    let nums = screenText.split(/(-?\d+\.?\d*)/g).filter(isNumber);
 
     // Error when pressing '=' after operator
     if (nums.length === operators.length) {
-        return 'Error';
+        //return 'Error';
     }
 
     console.log('Operands: ' + nums);
@@ -130,6 +142,10 @@ function operate(screenText) {
 
     // Round to up to 2 decimal places
     if (!isNaN(result)) {
+        if (result % 1 != 0) {
+            allowDot = false;
+        }
+
         return Math.round((result + Number.EPSILON) * 100) / 100;
     } else {
         return 'Error';
